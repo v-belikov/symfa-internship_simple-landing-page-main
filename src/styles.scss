@@ -3,5 +3,43 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+.header_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-list {
+      display: flex;
+      flex-direction: row;
+      width: 450px;
+      justify-content: space-between;
+      &__link {
+        font-family: 'Alegreya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 186%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #000000;
+      }
+    }
+    &-img {
+      // height: 42px;
+    }
+  }
+}
 
 /* WRITE YOUR CODE BELOW */
