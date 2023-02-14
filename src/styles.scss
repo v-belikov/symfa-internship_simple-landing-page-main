@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Alegreya', serif;
+  font-family: 'Inika', serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
 }
 a {
   text-decoration: none;
@@ -9,37 +19,187 @@ a {
 li {
   list-style-type: none;
 }
+.hidden_title {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header_block__logo {
+  width: 306px;
+  height: 72px;
+  img {
+    // width: 100%;
+  }
+}
 
 .header_block {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  &__nav {
+  align-items: center;
+  height: 100px;
+}
+
+.header_block__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    &-list {
+    flex-direction: row;
+    width: 450px;
+    justify-content: space-between;
+    &__link a {
+      font-size: 22px;
+      line-height: 186%;
       display: flex;
-      flex-direction: row;
-      width: 450px;
-      justify-content: space-between;
-      &__link {
-        font-family: 'Alegreya';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 186%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.04em;
-        color: #000000;
+      letter-spacing: 0.04em;
+      color: #000000;
+      transition: all 0.1s ease;
+      &:hover {
+        color: rgba(52, 75, 94, 0.85);
       }
-    }
-    &-img {
-      // height: 42px;
+      &:active {
+        color: #344b5e;
+      }
     }
   }
 }
 
-/* WRITE YOUR CODE BELOW */
+.main_bg {
+  height: 600px;
+  background-image: url(assets/img/png/main_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+.gallery__title {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 0 50px 0;
+}
+.gallery__main_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+  &__item_img {
+    width: 30%;
+  }
+}
+.know_more {
+}
+.know_more__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.know_more__main_block {
+  display: flex;
+  flex-direction: row;
+  gap: 95px;
+  padding: 50px 0 50px 0;
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    h3 {
+      font-family: 'Alegreya';
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 186%;
+      letter-spacing: 0.04em;
+    }
+    button {
+      width: 250px;
+      height: 70px;
+      background: #ffffff;
+      border: 1px solid #000000;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 186%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.04em;
+      transition: all 0.1s ease;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+      }
+      &:active {
+        background: #ffffff;
+        border: 1px solid #344b5e;
+        letter-spacing: 0.04em;
+        color: #344b5e;
+      }
+    }
+    p {
+      font-family: 'Alegreya';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+  }
+  &__picture {
+  }
+}
+.footer_block {
+  background-color: #c1c1c1;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title_logo {
+  }
+  &__main_block {
+    width: 360px;
+    p {
+      font-family: 'Alegreya';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.footer__social_block {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
