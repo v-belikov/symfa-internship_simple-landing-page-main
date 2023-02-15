@@ -4,4 +4,46 @@
   padding: 0;
 }
 
-/* WRITE YOUR CODE BELOW */
+header {
+  display: flex;
+  width: 1200px;
+  height: 100px;
+  margin: 0 360px;
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    .nav-bar {
+      button {
+        width: 110px;
+        height: 30px;
+        border: 0;
+        background-color: white;
+        font-family: 'Alegreya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 186%;
+
+        &:hover {
+          color: #344B5ED9;
+          opacity: 85%;
+        }
+
+        &:active {
+          color: #344B5E;
+        }
+      }
+    }
+  }
+}
