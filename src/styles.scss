@@ -5,43 +5,169 @@
 }
 
 header {
-  display: flex;
-  height: 100px;
-  margin: 0 360px;
+  .last-work {
+    height: 600px;
+    background-image: url("./assets/img/header/last_work_img.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
   }
 
-  .navigation-container {
+  .header-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100px;
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
+
+    .navigation-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      .nav-bar {
+        button {
+          width: 110px;
+          height: 30px;
+          border: 0;
+          background-color: white;
+          font-family: 'Alegreya';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 186%;
+
+          &:hover {
+            color: #344B5ED9;
+            opacity: 85%;
+            transition: all 0.1s ease;
+            cursor: pointer;
+          }
+
+          &:active {
+            color: #344B5E;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .body-top {
+    display: flex;
     justify-content: center;
-    width: 50%;
+    gap: 300px;
+    margin-bottom: 30px;
+  }
 
-    .nav-bar {
-      button {
-        width: 110px;
-        height: 30px;
-        border: 0;
-        background-color: white;
-        font-family: 'Alegreya';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 186%;
+  .body-gallery {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
-        &:hover {
-          color: #344B5ED9;
-          opacity: 85%;
-          transition: all 0.1s ease;
+    .gallery-item {
+      width: 30%;
+
+      &:hover {
+        box-shadow: 0px 0px 15px 5px #00000080;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .body-bottom {
+    margin: 30px 0;
+
+    .separator {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .bottom-container {
+      display: flex;
+      flex-direction: row;
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 50px;
+
+        h2 {
+          font-family: Alegreya;
+          font-size: 26px;
+          font-weight: 700;
+          line-height: 48px;
+          letter-spacing: 0.04em;
+          text-align: left;
         }
 
-        &:active {
-          color: #344B5E;
+        button {
+          width: 250px;
+          height: 70px;
+          margin: 20px;
+          background-color: white;
+          font-family: Roboto;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 52px;
+          letter-spacing: 0.04em;
+          text-align: center;
+          border: 1px solid #000000;
+
+          &:hover {
+            border: 1px solid #344B5ED9;
+            box-shadow: 0px 4px 4px 0px #00000080;
+            color: #344B5ED9;
+            opacity: 85%;
+            cursor: pointer;
+          }
+
+          &:active {
+            border: 1px solid #344B5E;
+            color: #344B5E;
+            box-shadow: none;
+          }
+        }
+
+        .bottom-text {
+          font-family: Alegreya;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 36px;
+          letter-spacing: 0.04em;
+          text-align: center;
+
+        }
+      }
+
+      .bottom-img-container {
+        img {
+          width: 262px;
+          height: 328px;
         }
       }
     }
@@ -49,7 +175,6 @@ header {
 }
 
 footer {
-  width: 1920px;
   height: 500px;
   padding: 0 360px;
   background-color: #C1C1C1;
@@ -82,5 +207,47 @@ footer {
     width: 100px;
     border: 3px solid #000000;
     margin: 30px 0;
+  }
+
+  .phone-number {
+    &:hover {
+      color: #344B5ED9;
+      opacity: 85%;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: #344B5E;
+    }
+  }
+
+  .email {
+    &:hover {
+      color: #344B5ED9;
+      opacity: 85%;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: #344B5E;
+    }
+  }
+
+  .social-container {
+    ul {
+      list-style: none;
+      display: inline-flex;
+
+      img {
+        &:hover {
+          filter: opacity(0.65);
+        }
+
+        &:active {
+          filter: opacity(0.85);
+        }
+      }
+    }
+
   }
 }
