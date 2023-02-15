@@ -15,6 +15,10 @@ body {
   color: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -81,6 +85,73 @@ li {
         color: #344b5e;
       }
     }
+  }
+}
+
+.header_block__nav__burger {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  background-color: #c1c1c1;
+  overflow: auto;
+  transition: all 0.3s ease;
+  &-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 100%;
+    &__link a {
+      font-family: 'Alegreya';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 150%;
+      color: #000000;
+      transition: all 0.1s ease;
+      &:hover {
+        color: rgba(52, 75, 94, 0.85);
+      }
+      &:active {
+        color: #344b5e;
+      }
+    }
+  }
+}
+.burger_btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  z-index: 3;
+  & span {
+    top: 18px;
+    background-color: #000000;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    transition: all 0.1s ease;
+  }
+  &::after,
+  &::before {
+    content: '';
+    background-color: #000000;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    transition: all 0.1s ease;
+  }
+  &::after {
+    top: 0;
+  }
+  &::before {
+    bottom: 0;
   }
 }
 
@@ -272,7 +343,8 @@ li {
 @media (max-width: 1180px) {
   .gallery__main_block {
     &__item_img {
-      width: 48%;
+      // width: 48%;
+      width: 47%;
       img {
         width: 100%;
       }
@@ -306,4 +378,30 @@ li {
 }
 
 @media (max-width: 850px) {
+  .body.active {
+    overflow: hidden;
+  }
+  .header_block__nav {
+    display: none;
+  }
+  .header_block__nav__burger.active {
+    // display: block;
+    top: 0;
+    &-list {
+    }
+  }
+  .burger_btn {
+    display: block;
+  }
+  .burger_btn.active::before {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .burger_btn.active::after {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+  .burger_btn.active span {
+    transform: scale(0);
+  }
 }

@@ -8,36 +8,46 @@
     <title>Maryia_Photography</title>
 </head>
 
-<body>
-    <header class="header">
+<body class="body">
+    <header class="header" id="header">
         <div class="wrapper">
             <div class="header_block">
                 <h1 class="hidden_title">Maryia_Photography</h1>
                 <div class="header_block__logo">
-                    <a href="#">
+                    <a href="#header">
                         <img src="./assets/img/svg/logo.svg" alt="logo">
                     </a>
                 </div>
                 <nav class="header_block__nav">
                     <ul class="header_block__nav-list">
-                        <li class="header_block__nav-list__link"><a href="#">Главная</a></li>
-                        <li class="header_block__nav-list__link"><a href="#"> Портфолио</a></li>
-                        <li class="header_block__nav-list__link"><a href="#">Обо мне</a></li>
-                        <li class="header_block__nav-list__link"><a href="#">Контакты</a></li>
+                        <li class="header_block__nav-list__link"><a href="#header">Главная</a></li>
+                        <li class="header_block__nav-list__link"><a href="#galary"> Портфолио</a></li>
+                        <li class="header_block__nav-list__link"><a href="#know_more">Обо мне</a></li>
+                        <li class="header_block__nav-list__link"><a href="#footer">Контакты</a></li>
                     </ul>
                     <div class="header_block__nav-img">
                         <img src="./assets/img/svg/last_work.svg" alt="last_work">
                     </div>
                 </nav>
+
+                <div class="burger_btn"><span></span></div>
+                <nav class="header_block__nav__burger">
+                    <ul class="header_block__nav__burger-list">
+                        <li class="header_block__nav__burger-list__link"><a href="#header">Главная</a></li>
+                        <li class="header_block__nav__burger-list__link"><a href="#galary"> Портфолио</a></li>
+                        <li class="header_block__nav__burger-list__link"><a href="#know_more">Обо мне</a></li>
+                        <li class="header_block__nav__burger-list__link"><a href="#footer">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="main_bg">
         </section>
 
-        <section class="gallery_block">
+        <section class="gallery_block" id="galary">
             <div class="wrapper">
                 <div class="gallery">
                     <div class="gallery__title">
@@ -87,7 +97,7 @@
             </div>
         </section>
 
-        <section class="know_more_block">
+        <section class="know_more_block" id="know_more">
             <div class="wrapper">
                 <div class="know_more">
                     <div class="know_more__title">
@@ -115,11 +125,11 @@
         </section>
 
     </main>
-    <footer class="footer_block">
+    <footer class="footer_block" id="footer">
         <div class="wrapper">
             <div class="footer">
                 <div class="footer__title_logo">
-                    <a href="#">
+                    <a href="#header">
                         <img src="./assets/img/svg/logo.svg" alt="logo">
                     </a>
                 </div>
