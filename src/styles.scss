@@ -66,7 +66,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &-list {
+  &_list {
     display: flex;
     flex-direction: row;
     width: 450px;
@@ -97,7 +97,7 @@ li {
   background-color: #c1c1c1;
   overflow: auto;
   transition: all 0.3s ease;
-  &-list {
+  &_list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -379,7 +379,19 @@ li {
 
 @media (max-width: 850px) {
   .body.active {
+    // position: absolute;
     overflow: hidden;
+  }
+  .header {
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+  }
+  .main {
+    padding-top: 100px;
+  }
+  section {
+    scroll-margin-top: 100px;
   }
   .header_block__nav {
     display: none;
@@ -387,7 +399,7 @@ li {
   .header_block__nav__burger.active {
     // display: block;
     top: 0;
-    &-list {
+    &_list {
     }
   }
   .burger_btn {
