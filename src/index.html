@@ -10,31 +10,65 @@
 
 <body>
 
-<header>
+<header id="header">
   <div class="header-container">
     <div class="logo-container">
       <picture>
-        <img src="assets/img/logo.svg" alt="logo">
+        <img class="logo" src="assets/img/logo.svg" alt="logo">
       </picture>
     </div>
     <div class="navigation-container">
-      <nav class="nav-bar">
-        <button>Главная</button>
-        <button>Портфолио</button>
-        <button>Обо мне</button>
-        <button>Контакты</button>
-      </nav>
-      <picture>
-        <img src="assets/img/header/last_work.svg" alt="latest work">
-      </picture>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li>
+            <a class="menu__item" href="#header">Главная</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#portfolio">Портфолио</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#about">Обо мне</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation-1920">
+        <nav class="nav-bar">
+          <ul class="menu__box">
+            <li>
+              <a href="#header">Главная</a>
+            </li>
+            <li>
+              <a href="#portfolio">Портфолио</a>
+            </li>
+            <li>
+              <a href="#about">Обо мне</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="latest-work">
+          <picture>
+            <img src="assets/img/header/last_work.svg" alt="latest work">
+          </picture>
+        </div>
+      </div>
     </div>
   </div>
-    <div class="last-work"></div>
+  <div class="last-work"></div>
 </header>
 
 <main>
-  <div class="body-top">
-    <div>
+  <div class="body-top" id="portfolio">
+    <div class="early-work">
       <img src="./assets/img/main/top/early_work.svg" alt="early work">
     </div>
     <div>
@@ -81,34 +115,37 @@
 
   </div>
 
-  <div class="body-bottom">
-    <div class="separator">
+  <div class="body-bottom" id="about">
+    <div class="separator-container">
       <picture>
-        <img src="./assets/img/main/bottom/separator.svg" alt="separator">
+        <img class="separator" src="./assets/img/main/bottom/separator.svg" alt="separator">
       </picture>
     </div>
     <div class="bottom-container">
-      <div class="text-container">
-        <h2>Хотите научиться делать фотографии, выигрывающие премии?</h2>
-        <button><span>Узнать больше </span></button>
-        <p class="bottom-text">
-          Научитесь фиксировать момент, как настоящие фотографы. <br>
-          Пройдите за кулисы моего портфолио «Фотограф года».<br>
-          Ознакомьтесь с подробными видеороликами и электронными<br>
-          книгами на уникальной образовательной платформе<br>
-          «Фотографический процесс».
-        </p>
-      </div>
-      <div class="bottom-img-container">
-        <picture>
-          <img src="./assets/img/main/bottom/process.jpg">
-        </picture>
+      <h2 class="body-bottom-header">Хотите научиться делать фотографии, выигрывающие премии?</h2>
+      <div class="body-bottom-text">
+        <div class="text-container">
+          <h2 class="body-bottom-header-1920">Хотите научиться делать фотографии, выигрывающие премии?</h2>
+          <button>Узнать больше</button>
+          <p class="bottom-text">
+            Научитесь фиксировать момент, как настоящие фотографы. <br>
+            Пройдите за кулисы моего портфолио «Фотограф года».<br>
+            Ознакомьтесь с подробными видеороликами и электронными<br>
+            книгами на уникальной образовательной платформе<br>
+            «Фотографический процесс».
+          </p>
+        </div>
+        <div class="bottom-img-container">
+          <picture>
+            <img src="./assets/img/main/bottom/process.jpg">
+          </picture>
+        </div>
       </div>
     </div>
   </div>
 </main>
 
-<footer>
+<footer id="contacts">
   <picture>
     <img src="assets/img/logo.svg" alt="logo">
   </picture>
