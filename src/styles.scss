@@ -14,6 +14,9 @@ body {
   font-weight: 400;
   color: #000000;
 }
+body.lock {
+  overflow: hidden;
+}
 
 html {
   scroll-behavior: smooth;
@@ -26,11 +29,7 @@ a {
 li {
   list-style-type: none;
 }
-.header {
-  // height: 100px;
-  // display: flex;
-  // width: 100%;
-}
+
 .hidden_title {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -213,7 +212,6 @@ li {
   display: none;
   position: fixed;
   z-index: 1;
-  // padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -238,21 +236,38 @@ li {
   animation-name: animatetop;
   animation-duration: 0.4s;
   &_img {
-    width: 100%;
-    img {
-      width: 100%;
-    }
+    width: 500px;
+    height: 500px;
+    z-index: 5;
+    // background-image: url(assets/img/png/main_bg.png);
+    // img {
+    //   width: 100%;
+    // }
+    // & .gallery__main_block__item_img {
+    //   width: 100%;
+    // }
   }
+  // & .gallery__main_block__item_img {
+  //   width: 100%;
+  // }
 }
 
 .slider_btn {
   &_previous {
     margin: 0 10px 0 10px;
     cursor: pointer;
+    transition: all 0.1s ease;
+    &:hover {
+      filter: opacity(0.7);
+    }
   }
   &_next {
     margin: 0 10px 0 10px;
     cursor: pointer;
+    transition: all 0.1s ease;
+    &:hover {
+      filter: opacity(0.7);
+    }
   }
 }
 
@@ -496,9 +511,9 @@ li {
 }
 
 @media (max-width: 850px) {
-  .body.active {
-    overflow: hidden;
-  }
+  // .body .active {
+  //   overflow: hidden;
+  // }
 
   .header {
     background-color: #ffffff;
