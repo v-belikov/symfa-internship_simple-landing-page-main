@@ -5,12 +5,81 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style src="./styles.scss"></style>
+    <script src="main.ts"></script>
     <title>Document</title>
 </head>
 <body>
-<!-- main content -->
-
-<!-- image previewer -->
-
+    <header class="header">
+        <div class="content">
+            <img class="logo" src="./assets/logo.png" alt="">
+            <div class="navbar">
+                <ul>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Портфолио</a></li>
+                    <li><a href="">Обо мне</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <img class="navbarLilImg" src="./assets/lastWork.png" alt="">
+            </div>
+            <button class="burger" id="burgerButton"><i class="bars fa-3x"></i></button>
+        </div>
+        <img class="navbarImg" src="./assets/lastWorkImg.png" alt="">
+    </header>
+    <main>
+        <div class="top">
+            <img class="previousWork" src="./assets/previousWork.png" alt="">
+            <img src="./assets/camera.png" alt="">
+        </div>
+        <div class="galary">
+            <img class='image' src="./assets/IMG_1.png" alt="">
+            <img class='image' src="./assets/IMG_2.png" alt="">
+            <img class='image' src="./assets/IMG_3.png" alt="">
+            <img class='image' src="./assets/IMG_4.png" alt="">
+            <img class='image' src="./assets/IMG_5.png" alt="">
+            <img class='image' src="./assets/IMG_6.png" alt="">
+            <img class='image' src="./assets/IMG_7.png" alt="">
+            <img class='image' src="./assets/IMG_8.png" alt="">
+            <img class='image' src="./assets/IMG_9.png" alt="">
+            <img class='image' src="./assets/IMG_10.png" alt="">
+            <img class='image' src="./assets/IMG_11.png" alt="">
+            <img class='image' src="./assets/IMG_12.png" alt="">
+        </div>
+        <div class="bottom">
+            <img class='delimiter' src="./assets/delimiter.png" alt="">
+            <div class="textContent">
+                <div class="bottomInfo">
+                    <p class="headInfo">Хотите научиться делать фотографии, выигрывающие премии?</p>
+                    <button class="buttonInfo">Узнать больше</button>
+                    <p class="info">Научитесь фиксировать момент, как настоящие фотографы. Пройдите за кулисы моего портфолио «Фотограф года». Ознакомьтесь с подробными видеороликами и электронными книгами на уникальной образовательной платформе «Фотографический процесс».</p>
+                </div>
+                <img class='process' src="./assets/process.png" alt="">
+            </div>
+        </div>
+        <div class="modal-container"> 
+            <button class="close"><i class="fa-solid fa-close fa-2x" style="color:rgb(255, 255, 255)"></i></button>
+            <div class="modal-content">
+              <div class="left"><img src="./assets/arrowLeft.png" alt=""></div>
+              <div class="modalImg"></div>
+              <div class="right"><img src="./assets/arrowRight.png" alt=""></div>
+            </div>
+          </div>
+    </main>
+    <footer>
+        <div class="footerContent">
+            <img class="logo2" src="./assets/logoFooter.png" alt="">
+            <div class="line1"></div>
+            <p class="footerInfo">Советская 95, этаж 1<br/>город Гомель<br/>тел +375 (29) 111 - 22 - 33<br/>maryiaph@gmail.com<br/>© 2017 MaryiaPhotographyStudio</p>
+            <div class="line2"></div>
+            <div class="socials">
+                <img src="./assets/vk1.png" alt="">
+                <img src="./assets/twitter2.png" alt="">
+                <img src="./assets/inst3.png" alt="">
+                <img src="./assets/facebook4.png" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

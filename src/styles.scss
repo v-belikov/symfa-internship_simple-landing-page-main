@@ -1,7 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Roboto&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* WRITE YOUR CODE BELOW */
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 1200px;
+  padding: 0 30px;
+}
+.navbar{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbarLilImg{
+  width: 180px;
+}
+.navbar ul li{
+  display: inline;
+  font-family: 'Alegreya', serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0 3px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #000000;
+  padding: 0 3px;
+}
+.navbarImg{
+  height:600px;
+  width: 100%;
+}
+.burger{
+  position:relative;
+  display: none;
+  border: 0;
+  background-color: transparent;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  margin: 50px 0;
+}
+.galary{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1200px;
+  padding: 0 30px;
+}
+.galary img{
+  width: 360px;
+  height: 270px;
+  margin-bottom: 30px;
+}
+
+.bottom{
+  margin: 30px 0 50px 0;
+  font-family: 'Alegreya', serif;
+  letter-spacing: 0.04em;
+  width: 1200px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+.delimiter{
+  width: 535px;
+  margin: 0 auto;
+}
+.textContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.textContent img{
+  width: 262px;
+  height: 328px;
+}
+.bottomInfo{ 
+  text-align: center;
+  width: 790px;
+}
+.headInfo{
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+.buttonInfo{
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
+  background-color: transparent;
+  border-color: black;
+  border-width: 1px;
+  cursor: pointer;
+}
+.info{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  padding: 0 25px;
+}
+
+footer{
+  background-color:#C1C1C1;
+  width: 100%;
+}
+.footerContent{
+  font-family: 'Alegreya', serif;
+  letter-spacing: 0.04em;
+  font-size: 22px;
+  width: 1200px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line1{
+  width: 290px;
+  border: 1.5px solid #000000;
+  border-radius: 100px;
+  margin: 20px 0;
+}
+.footerInfo{
+  width: 360px;
+  text-align: center;
+}
+.line2{
+  width: 100px;
+  border: 2px solid #000000;
+  margin: 20px 0;
+}
+.socials{
+  margin-top: 20px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0; 
+  display: flex;
+  width: 100vw;
+  height: 100vh; 
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.71);
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  padding: 30px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.modalImg .image{
+  width: 700px; 
+  height: 490px;
+  margin: 0 30px;
+}
+.modal-container { 
+  pointer-events: none; 
+  opacity: 0;
+}
+.modal-container.is-open { 
+  pointer-events: all; 
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%; 
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .content{
+    width: 100%;
+    padding: 0 30px;
+  }
+  .navbarImg{
+    height: 400px;
+  }
+  .navbarLilImg{
+    display: none;
+  }
+  .navbar ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #C1C1C1;
+    padding: 210px 0;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .navbar ul li {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  .header.open .navbar ul{
+    transform: translateX(100%)
+  }
+  .bars::before{
+    content: '\f00d';
+    font: var(--fa-font-solid);
+  }
+  .header.open .bars::before {
+    content: '\f0c9';
+    font: var(--fa-font-solid);
+  }
+  .burger{
+    display: block;
+  }
+
+  .previousWork{
+    display: none;
+  }
+  .top{
+    width: 600px;
+    margin: 50px 0;
+    justify-content: center;
+  }
+  .galary{
+    width: 100%;
+  }
+  .galary img{
+    width: 340px;
+    height: 200px;
+    margin-bottom: 28px;
+  }
+  .bottom{
+    width: 100%;
+  }
+  .bottomInfo{ 
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+  }
+  .headInfo{
+    width: 730px;
+    font-size: 22px;
+  }
+  .info{
+    font-size: 24px;
+  }
+  .footerContent{
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .content{
+    width: 100%;
+    padding: 0 30px;
+    height: 50px;
+  }
+  .logo{
+    width: 118px;
+  }
+  .navbarImg{
+    height: 400px;
+    width: 505px;
+  }
+  .navbarLilImg{
+    display: none;
+  }
+  .navbar ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #C1C1C1;
+    padding: 117px 0;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .navbar ul li {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .header.open .navbar ul{
+    transform: translateX(100%)
+  }
+  .bars::before{
+    content: '\f00d';
+    font: var(--fa-font-solid);
+  }
+  .header.open .bars::before {
+    content: '\f0c9';
+    font: var(--fa-font-solid);
+  }
+  .burger{
+    display: block;
+  }
+
+  .previousWork{
+    display: none;
+  }
+  .top{
+    width: 600px;
+    margin: 15px 0;
+    justify-content: center;
+  }
+  .galary{
+    width: 100%;
+  }
+  .galary img{
+    width: 340px;
+    height: 200px;
+    margin-bottom: 28px;
+  }
+  .bottom{
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0 15px;
+  }
+  .bottomInfo{ 
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+  }
+  .headInfo{
+    line-height: 100%;
+    order: 0;
+  }
+  .buttonInfo{
+    order: 2;
+    margin: 20px 0 15px 0;
+  }
+  .info{
+    order: 1;
+    font-size: 16px; 
+    line-height: 100%;
+  }
+  .delimiter{
+    width: 226px;
+  }
+  .textContent{
+    margin-top: 15px;
+  }
+  .process{
+    display: none;
+  }
+  
+  .footerContent{
+    width: 100%;
+  }
+  .footerInfo{
+    font-size: 16px; 
+  }
+
+  .modalImg .image{
+    width: 290px; 
+    height: 215px;
+  }
+}
