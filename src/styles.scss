@@ -207,7 +207,6 @@ li {
   }
 }
 
-// modal_slider start
 .modal {
   display: none;
   position: fixed;
@@ -236,18 +235,20 @@ li {
   animation-name: animatetop;
   animation-duration: 0.4s;
   &_img {
-    width: 500px;
-    height: 500px;
+    width: 70vh;
     z-index: 5;
-    img {
-      width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    img {            
+      width: 95%;
     }
   }
 }
 
 .slider_btn {
   &_previous {
-    margin: 0 10px 0 10px;
+    margin: 0 0 0 10px;
     cursor: pointer;
     transition: all 0.1s ease;
     &:hover {
@@ -255,7 +256,7 @@ li {
     }
   }
   &_next {
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 0;
     cursor: pointer;
     transition: all 0.1s ease;
     &:hover {
@@ -504,10 +505,6 @@ li {
 }
 
 @media (max-width: 850px) {
-  // .body .active {
-  //   overflow: hidden;
-  // }
-
   .header {
     background-color: #ffffff;
     width: 100%;
@@ -563,6 +560,29 @@ li {
           display: none;
         }
       }
+    }
+  }
+
+  .slider_btn {
+    &_previous {
+      left: 0;
+      height: 100%;
+      width: 20%;
+      position: absolute;
+      z-index: 6;
+      img{
+        opacity: 0;
+      }    
+    }
+    &_next {
+      right: 0;
+      height: 100%;
+      width: 20%;
+      position: absolute;
+      z-index: 6;
+      img{
+        opacity: 0;
+      } 
     }
   }
 }

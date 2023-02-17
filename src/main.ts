@@ -27,40 +27,39 @@ Array.prototype.slice.call(burgerLink).map((btn: HTMLElement) => {
 });
 
 // slider
-// косяк с работой самого слайдера, суть такова:
-// имеем массив с путями к самим картинкам. При клике на картинку получаем порядковый номер этой картинки, //
-// что позволяет нарисвать ее в модальном-окне-слайдере, перебрав этот массив.
-// НО все картинки при работе вебпака(видимо) получают дополнительный уникальный класс?(добавляется к пути). Не совсем ясно, что делать в таком случае.
-// обращаясь по путям с этим классом картинку получить у меня не получается. НО и без него тоже.  //
 let numberCurrentImg = 0;
 let langsArrayOfImg = 0;
 const arrayOfPictures: Array<string> = [];
 
 function activePicture(imgIndex: number) {
-  console.log(numberCurrentImg);
-  console.log(arrayOfPictures[imgIndex]);
-  // console.log(arrayOfPictures)
-  // modalContent.innerHTML += `<img src="./assets/img/png/IMG_${arrayOfPictures[imgIndex]}.png" alt="">`
-  modalContent.innerHTML += `<img src="${arrayOfPictures[imgIndex]}" alt="">`;
+  modalContent.innerHTML = `<img src="${arrayOfPictures[imgIndex]}" alt="">`;
 }
 
 Array.prototype.slice.call(galleryItemImg).map((img: HTMLElement, index: number) => {
   arrayOfPictures.push(img.querySelector('img').getAttribute('src'));
-  // arrayOfPictures.push(img.querySelector('img').getAttribute('src').slice(11, 15));
-  numberCurrentImg = index;
   langsArrayOfImg = galleryItemImg.length;
   img.addEventListener('click', () => {
-    body.classList.toggle('lock');
-    modal.classList.toggle('active');
+    numberCurrentImg = index;
+    body.classList.add('lock');
+    modal.classList.add('active');
     activePicture(numberCurrentImg);
   });
+});
+
+modalContent.addEventListener('click', (event: any) => {
+  const currentClick = !event.target.closest('modal_content_img');
+
+  if (currentClick) {
+    body.classList.remove('lock');
+    modal.classList.remove('active');
+  }
 });
 
 sliderBtnPrevious.addEventListener('click', () => {
   numberCurrentImg -= 1;
 
-  if (numberCurrentImg <= 0) {
-    numberCurrentImg = 0;
+  if (numberCurrentImg < 0) {
+    numberCurrentImg = langsArrayOfImg - 1;
   }
 
   activePicture(numberCurrentImg);
