@@ -239,17 +239,10 @@ li {
     width: 500px;
     height: 500px;
     z-index: 5;
-    // background-image: url(assets/img/png/main_bg.png);
-    // img {
-    //   width: 100%;
-    // }
-    // & .gallery__main_block__item_img {
-    //   width: 100%;
-    // }
+    img {
+      width: 100%;
+    }
   }
-  // & .gallery__main_block__item_img {
-  //   width: 100%;
-  // }
 }
 
 .slider_btn {
