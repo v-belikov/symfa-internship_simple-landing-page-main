@@ -200,7 +200,7 @@ main {
       height: 270px;
 
       &:hover {
-        box-shadow: 0px 0px 15px 5px var(--box-shadow-color);
+        box-shadow: 0 0 15px 5px var(--box-shadow-color);
         transition: all 0.2s ease;
         cursor: pointer;
       }
@@ -254,7 +254,7 @@ main {
           height: 70px;
           margin: 20px;
           background-color: white;
-          font-family: Roboto;
+          font-family: Roboto, serif;
           font-size: 28px;
           font-weight: 400;
           line-height: 52px;
@@ -264,7 +264,7 @@ main {
 
           &:hover {
             border: 1px solid var(--hover-color);
-            box-shadow: 0px 4px 4px 0px var(--box-shadow-color);
+            box-shadow: 0 4px 4px 0 var(--box-shadow-color);
             color: var(--hover-color);
             opacity: 85%;
             cursor: pointer;
