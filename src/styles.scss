@@ -333,7 +333,7 @@ footer {
 
   .phone-number {
     &:hover {
-      color: var();
+      color: var(--hover-color);
       opacity: 85%;
       cursor: pointer;
     }
