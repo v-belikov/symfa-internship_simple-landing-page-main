@@ -5,12 +5,17 @@
   padding: 0;
 }
 
+button{
+  background-color: transparent;
+  cursor: pointer;
+}
+
 header{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.content{
+.header_content{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,16 +23,16 @@ header{
   width: 1200px;
   padding: 0 30px;
 }
-.navbar{
+.header_navbar{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.navbarLilImg{
+.header-navbar_image_last-work{
   width: 180px;
 }
-.navbar ul li{
+.header_navbar ul li{
   display: inline;
   font-family: 'Alegreya', serif;
   letter-spacing: 0.04em;
@@ -35,16 +40,16 @@ header{
   font-size: 22px;
   margin: 0 3px;
 }
-.navbar ul li a{
+.header_navbar ul li a{
   text-decoration: none;
   color: #000000;
   padding: 0 3px;
 }
-.navbarImg{
+.header_image_last-work{
   height:600px;
   width: 100%;
 }
-.burger{
+.header_button_burger{
   position:relative;
   display: none;
   border: 0;
@@ -86,41 +91,39 @@ main{
   display: flex;
   flex-direction: column;
 }
-.delimiter{
+.bottom_delimiter{
   width: 535px;
   margin: 0 auto;
 }
-.textContent{
+.bottom_content{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
 }
-.textContent img{
+.bottom_content img{
   width: 262px;
   height: 328px;
 }
-.bottomInfo{ 
+.bottom_info{ 
   text-align: center;
   width: 790px;
 }
-.headInfo{
+.bottom_head-info{
   font-weight: 700;
   font-size: 26px;
   margin-bottom: 24px;
 }
-.buttonInfo{
+.bottom_button-info{
   font-weight: 400;
   font-size: 28px;
   margin-bottom: 24px;
   font-family: 'Roboto', sans-serif;
   padding: 15px;
-  background-color: transparent;
   border-color: black;
-  border-width: 1px;
-  cursor: pointer;
+  border-width: 2px;
 }
-.info{
+.bottom_main-info{
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
@@ -131,7 +134,7 @@ footer{
   background-color:#C1C1C1;
   width: 100%;
 }
-.footerContent{
+.footer_content{
   font-family: 'Alegreya', serif;
   letter-spacing: 0.04em;
   font-size: 22px;
@@ -141,29 +144,29 @@ footer{
   flex-direction: column;
   align-items: center;
 }
-.line1{
+.footer_line1{
   width: 290px;
   border: 1.5px solid #000000;
   border-radius: 100px;
   margin: 20px 0;
 }
-.footerInfo{
+.footer_info{
   width: 360px;
   text-align: center;
 }
-.line2{
+.footer_line2{
   width: 100px;
   border: 2px solid #000000;
   margin: 20px 0;
 }
-.socials{
+.footer_socials{
   margin-top: 20px;
   width: 250px;
   display: flex;
   justify-content: space-between;
 }
 
-.modal-container {
+.modal_container {
   position: fixed;
   left: 0;
   top: 0; 
@@ -173,32 +176,30 @@ footer{
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.71);
 }
-.modal-content {
+.modal_content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.close {
+.modal_button_close {
   position: absolute;
   right: 0;
   top: 0;
   width: 100px;
   height: 30px;
   padding: 30px;
-  background-color: transparent;
   border: 0;
-  cursor: pointer;
 }
-.modalImg .image{
+.modal_img .galary_image{
   width: 700px; 
   height: 490px;
   margin: 0 30px;
 }
-.modal-container { 
+.modal_container { 
   pointer-events: none; 
   opacity: 0;
 }
-.modal-container.is-open { 
+.modal_container.is-open { 
   pointer-events: all; 
   opacity: 1;
   display: flex;
@@ -207,20 +208,26 @@ footer{
   width: 100%; 
   height: 100%; 
 }
+.modal_button_left, .modal_button_right{
+  border: 0;
+}
+body.open { 
+  overflow-y: hidden;
+}
 
 
 @media (min-width: 768px) and (max-width: 1199px){
-  .content{
+  .header_content{
     width: 100%;
     padding: 0 30px;
   }
-  .navbarImg{
+  .header_image_last-work{
     height: 400px;
   }
-  .navbarLilImg{
+  .header-navbar_image_last-work{
     display: none;
   }
-  .navbar ul {
+  .header_navbar ul {
     position: absolute;
     top: 0;
     right: 0;
@@ -230,12 +237,12 @@ footer{
     width: 100%;
     transition: transform 0.5s;
   }
-  .navbar ul li {
+  .header_navbar ul li {
     display: block;
     font-size: 48px;
     margin-bottom: 10px;
   }
-  .header.open .navbar ul{
+  .header.open .header_navbar ul{
     transform: translateX(100%)
   }
   .bars::before{
@@ -246,11 +253,11 @@ footer{
     content: '\f0c9';
     font: var(--fa-font-solid);
   }
-  .burger{
+  .header_button_burger{
     display: block;
   }
 
-  .previousWork{
+  .top_previous-work{
     display: none;
   }
   .top{
@@ -269,41 +276,41 @@ footer{
   .bottom{
     width: 100%;
   }
-  .bottomInfo{ 
+  .bottom_info{ 
     width: 416px;
     display: flex;
     flex-direction: column;
   }
-  .headInfo{
+  .bottom_head-info{
     width: 730px;
     font-size: 22px;
   }
-  .info{
+  .bottom_main-info{
     font-size: 24px;
   }
-  .footerContent{
+  .footer_content{
     width: 100%;
   }
 
 }
 
 @media (min-width: 320px) and (max-width: 767px){
-  .content{
+  .header_content{
     width: 100%;
     padding: 0 30px;
     height: 50px;
   }
-  .logo{
+  .header_image_logo{
     width: 118px;
   }
-  .navbarImg{
+  .header_image_last-work{
     height: 400px;
     width: 505px;
   }
-  .navbarLilImg{
+  .header-navbar_image_last-work{
     display: none;
   }
-  .navbar ul {
+  .header_navbar ul {
     position: absolute;
     top: 0;
     right: 0;
@@ -313,12 +320,12 @@ footer{
     width: 100%;
     transition: transform 0.5s;
   }
-  .navbar ul li {
+  .header_navbar ul li {
     display: block;
     font-size: 32px;
     margin-bottom: 10px;
   }
-  .header.open .navbar ul{
+  .header.open .header_navbar ul{
     transform: translateX(100%)
   }
   .bars::before{
@@ -329,11 +336,11 @@ footer{
     content: '\f0c9';
     font: var(--fa-font-solid);
   }
-  .burger{
+  .header_button_burger{
     display: block;
   }
 
-  .previousWork{
+  .top_previous-work{
     display: none;
   }
   .top{
@@ -354,42 +361,42 @@ footer{
     margin: 0 0 15px 0;
     padding: 0 15px;
   }
-  .bottomInfo{ 
+  .bottom_info{ 
     width: 416px;
     display: flex;
     flex-direction: column;
   }
-  .headInfo{
+  .bottom_head-info{
     line-height: 100%;
     order: 0;
   }
-  .buttonInfo{
+  .bottom_button-info{
     order: 2;
     margin: 20px 0 15px 0;
   }
-  .info{
+  .bottom_main-info{
     order: 1;
     font-size: 16px; 
     line-height: 100%;
   }
-  .delimiter{
+  .bottom_delimiter{
     width: 226px;
   }
-  .textContent{
+  .bottom_content{
     margin-top: 15px;
   }
-  .process{
+  .bottom_img_process{
     display: none;
   }
   
-  .footerContent{
+  .footer_content{
     width: 100%;
   }
-  .footerInfo{
+  .footer_info{
     font-size: 16px; 
   }
 
-  .modalImg .image{
+  .modal_img .galary_image{
     width: 290px; 
     height: 215px;
   }
