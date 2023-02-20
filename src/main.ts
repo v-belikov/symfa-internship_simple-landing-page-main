@@ -2,15 +2,15 @@
 /* WRITE YOUR CODE BELOW */
 import './styles.scss';
 
-const body = document.querySelector('.body') as HTMLElement;
-const burgerBtn = document.querySelector('.burger_btn') as HTMLElement;
-const burgerMenu = document.querySelector('.header_block__nav__burger') as HTMLElement;
+const body = document.querySelector('.body');
+const burgerBtn = document.querySelector('.burger_btn');
+const burgerMenu = document.querySelector('.header_block__nav__burger');
 const burgerLink = document.querySelectorAll('.header_block__nav__burger_list__link');
 const galleryItemImg = document.querySelectorAll('.gallery__main_block__item_img');
-const modal = document.querySelector('.modal') as HTMLElement;
-const modalContent = document.querySelector('.modal_content_img') as HTMLElement;
-const sliderBtnPrevious = document.querySelector('.slider_btn_previous') as HTMLElement;
-const sliderBtnNext = document.querySelector('.slider_btn_next') as HTMLElement;
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal_content_img');
+const sliderBtnPrevious = document.querySelector('.slider_btn_previous');
+const sliderBtnNext = document.querySelector('.slider_btn_next');
 
 burgerBtn.addEventListener('click', () => {
   body.classList.toggle('lock');
@@ -18,7 +18,7 @@ burgerBtn.addEventListener('click', () => {
   burgerMenu.classList.toggle('active');
 });
 
-Array.prototype.slice.call(burgerLink).map((btn: HTMLElement) => {
+burgerLink.forEach((btn: HTMLElement) => {
   btn.addEventListener('click', () => {
     body.classList.remove('lock');
     burgerBtn.classList.remove('active');
@@ -27,50 +27,55 @@ Array.prototype.slice.call(burgerLink).map((btn: HTMLElement) => {
 });
 
 // slider
-let numberCurrentImg = 0;
-let langsArrayOfImg = 0;
-const arrayOfPictures: Array<string> = [];
+let currentImgIndex = 0;
+const pictures: Array<string> = [];
+
+const toggleModal = (): void => {
+  body.classList.toggle('lock');
+  modal.classList.toggle('active');
+};
 
 function activePicture(imgIndex: number) {
-  modalContent.innerHTML = `<img src="${arrayOfPictures[imgIndex]}" alt="">`;
+  const altName = pictures[imgIndex].slice(8, 15);
+
+  modalContent.innerHTML = `<img src="${pictures[imgIndex]}" alt="${altName}">`;
 }
 
-Array.prototype.slice.call(galleryItemImg).map((img: HTMLElement, index: number) => {
-  arrayOfPictures.push(img.querySelector('img').getAttribute('src'));
-  langsArrayOfImg = galleryItemImg.length;
+galleryItemImg.forEach((img: HTMLElement, index: number) => {
+  pictures.push(img.getAttribute('src'));
   img.addEventListener('click', () => {
-    numberCurrentImg = index;
-    body.classList.add('lock');
-    modal.classList.add('active');
-    activePicture(numberCurrentImg);
+    currentImgIndex = index;
+    toggleModal();
+    activePicture(currentImgIndex);
   });
 });
+
+const imgsCount = galleryItemImg.length;
 
 modalContent.addEventListener('click', (event: any) => {
   const currentClick = !event.target.closest('modal_content_img');
 
   if (currentClick) {
-    body.classList.remove('lock');
-    modal.classList.remove('active');
+    toggleModal();
   }
 });
 
 sliderBtnPrevious.addEventListener('click', () => {
-  numberCurrentImg -= 1;
+  currentImgIndex -= 1;
 
-  if (numberCurrentImg < 0) {
-    numberCurrentImg = langsArrayOfImg - 1;
+  if (currentImgIndex < 0) {
+    currentImgIndex = imgsCount - 1;
   }
 
-  activePicture(numberCurrentImg);
+  activePicture(currentImgIndex);
 });
 
 sliderBtnNext.addEventListener('click', () => {
-  numberCurrentImg += 1;
+  currentImgIndex += 1;
 
-  if (numberCurrentImg >= langsArrayOfImg) {
-    numberCurrentImg = 0;
+  if (currentImgIndex >= imgsCount) {
+    currentImgIndex = 0;
   }
 
-  activePicture(numberCurrentImg);
+  activePicture(currentImgIndex);
 });
