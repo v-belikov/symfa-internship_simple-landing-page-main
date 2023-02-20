@@ -1,16 +1,171 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Maryia_Photography</title>
 </head>
-<body>
-<!-- main content -->
 
-<!-- image previewer -->
+<body class="body" id="header">
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_block">
+                <h1 class="hidden_title">Maryia_Photography</h1>
+                <div class="header_block__logo">
+                    <a href="#header">
+                        <img src="./assets/img/svg/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="header_block__nav">
+                    <ul class="header_block__nav_list">
+                        <li class="header_block__nav_list__link"><a href="#header">Главная</a></li>
+                        <li class="header_block__nav_list__link"><a href="#gallary"> Портфолио</a></li>
+                        <li class="header_block__nav_list__link"><a href="#know_more">Обо мне</a></li>
+                        <li class="header_block__nav_list__link"><a href="#footer">Контакты</a></li>
+                    </ul>
+                    <div class="header_block__nav-img">
+                        <img src="./assets/img/svg/last_work.svg" alt="last_work">
+                    </div>
+                </nav>
+
+                <div class="burger_btn"><span></span></div>
+                <nav class="header_block__nav__burger">
+                    <ul class="header_block__nav__burger_list">
+                        <li class="header_block__nav__burger_list__link"><a href="#header">Главная</a></li>
+                        <li class="header_block__nav__burger_list__link"><a href="#gallary"> Портфолио</a></li>
+                        <li class="header_block__nav__burger_list__link"><a href="#know_more">Обо мне</a></li>
+                        <li class="header_block__nav__burger_list__link"><a href="#footer">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main_bg">
+        </section>
+
+        <section class="gallery_block" id="gallary">
+            <div class="wrapper">
+                <div class="gallery">
+                    <div class="gallery__title">
+                        <img class="previous_works" src="./assets/img/svg/previous_works.svg" alt="previous_works">
+                        <img class="photo_icon" src="./assets/img/svg/photo_icon.svg" alt="photo_icon">
+                    </div>
+
+                    <div class="gallery__main_block">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1202.png" alt="IMG_1202">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1157.png" alt="IMG_1157">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1197.png" alt="IMG_1197">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1195.png" alt="IMG_1195">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1189.png" alt="IMG_1189">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1185.png" alt="IMG_1185">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1158.png" alt="IMG_1158">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1125.png" alt="IMG_1125">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1098.png" alt="IMG_1098">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1067.png" alt="IMG_1067">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1057.png" alt="IMG_1057">
+                            <img class="gallery__main_block__item_img" src="./assets/img/png/IMG_1055.png" alt="IMG_1055">
+                    </div>
+
+                    <div id="modal" class="modal">
+                        <div class="modal_content">
+                            <div class="slider_btn_previous">
+                                <img src="./assets/img/svg/slider_btn_previous.svg" alt="btn_previous">
+                            </div>
+
+                            <div class="modal_content_img">
+                            </div>
+
+                            <div class="slider_btn_next">
+                                <img src="./assets/img/svg/slider_btn_next.svg" alt="btn_next">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="know_more_block" id="know_more">
+            <div class="wrapper">
+                <div class="know_more">
+                    <div class="know_more__title">
+                        <img src="./assets/img/svg/separator.svg" alt="separator">
+                    </div>
+                    <div class="know_more__mobile_title">Хотите научиться делать фотографии, выигрывающие премии?</div>
+                    <div class="know_more__main_block">
+                        <div class="know_more__main_block__description">
+                            <div class="h3">Хотите научиться делать фотографии, выигрывающие премии?</div>
+                            <div class="know_more__main_block__description__text">
+                                <button>Узнать больше</button>
+                                <p>Научитесь фиксировать момент, как настоящие фотографы. Пройдите за кулисы моего портфолио «Фотограф
+                                    года».
+                                    Ознакомьтесь с подробными видеороликами и электронными книгами на уникальной образовательной
+                                    платформе
+                                    «Фотографический процесс».</p>
+                            </div>
+                        </div>
+
+                        <div class="know_more__main_block__picture">
+                            <img src="./assets/img/png/proucess_making_photo.png" alt="proucess_making_photo">
+                        </div>
+                    </div>
+                </div>
+                <button class="know_more__mobile_button">Узнать больше</button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer_block" id="footer">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer__title_logo">
+                    <a href="#header">
+                        <img src="./assets/img/svg/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <span class="footer_line-top"></span>
+                <div class="footer__main_block">
+                    <p>Советская 95, этаж 1<br>
+                        город Гомель<br>
+                        <a href="tel:375291112233">тел +375 (29) 111 - 22 - 33</a><br>
+                        <a href="mailto:maryiaph@gmail.com">maryiaph@gmail.com</a><br>
+                        © 2017 MaryiaPhotographyStudio<br>
+                    </p>
+                </div>
+                <span class="footer_line-bottom"></span>
+                <div class="footer__social_block">
+
+                    <div class="footer__social_block__item">
+                        <a target="_blank" href="https://vk.com/">
+                            <img src="./assets/img/svg/vk_soc_svg.svg" alt="vk_soc">
+                        </a>
+                    </div>
+
+                    <div class="footer__social_block__item">
+                        <a target="_blank" href="https://twitter.com/">
+                            <img src="./assets/img/svg/tw_soc_svg.svg" alt="twitter_soc">
+                        </a>
+                    </div>
+
+                    <div class="footer__social_block__item">
+                        <a target="_blank" href="https://www.instagram.com/)">
+                            <img src="./assets/img/svg/inst_soc_svg.svg" alt="inst_soc">
+                        </a>
+                    </div>
+
+                    <div class="footer__social_block__item">
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <img src="./assets/img/svg/fb_soc_svg.svg" alt="fb_soc">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
